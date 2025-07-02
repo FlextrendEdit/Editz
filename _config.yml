@@ -1,0 +1,44 @@
+# GitHub Pages Configuration
+theme: jekyll-theme-minimal
+title: Professional Video Editor Portfolio
+description: Specializing in YouTube Shorts, Cinematic Montages, VFX & Animation
+url: "https://yourusername.github.io"
+baseurl: "/video-editor-portfolio"
+
+# SEO settings
+lang: en
+author: Professional Video Editor
+keywords: video editor, YouTube Shorts, cinematic montages, color grading, VFX, sound syncing
+
+# Social media
+social:
+  youtube: "#"
+  instagram: "#"
+  fiverr: "#"
+
+# Contact
+email: contact@videoeditor.com
+phone: "+1 (555) 123-4567"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+safe: true
+incremental: false
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files
+exclude:
+  - README.md
+  - GITHUB-PAGES-DEPLOYMENT-GUIDE.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache

@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Video Editor | Portfolio & Services</title>
+    <meta name="description" content="Professional video editor specializing in YouTube Shorts, cinematic montages, color grading, VFX, and sound syncing. View portfolio and get instant pricing.">
+    <meta name="keywords" content="video editor, YouTube Shorts, cinematic montages, color grading, VFX, sound syncing, video production">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/video-editor-portfolio/">
+    <meta property="og:title" content="Professional Video Editor | Portfolio & Services">
+    <meta property="og:description" content="Professional video editor specializing in YouTube Shorts, cinematic montages, color grading, VFX, and sound syncing.">
+    <meta property="og:image" content="https://yourusername.github.io/video-editor-portfolio/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/video-editor-portfolio/">
+    <meta property="twitter:title" content="Professional Video Editor | Portfolio & Services">
+    <meta property="twitter:description" content="Professional video editor specializing in YouTube Shorts, cinematic montages, color grading, VFX, and sound syncing.">
+    <meta property="twitter:image" content="https://yourusername.github.io/video-editor-portfolio/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#00ff41',
+                        'neon-pink': '#ff0080',
+                        'neon-yellow': '#ffff00',
+                        'dark-primary': '#0a0a0a',
+                        'dark-secondary': '#1a1a1a',
+                        'dark-tertiary': '#2a2a2a'
+                    },
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'monospace'],
+                        'inter': ['Inter', 'sans-serif'],
+                        'code': ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00ff41, #ff0080);
+            border-radius: 4px;
+        }
+        
+        /* Glitch Animation */
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 #00ff41, -0.05em -0.025em 0 #ff0080, 0.025em 0.05em 0 #ffff00; }
+            15% { text-shadow: 0.05em 0 0 #00ff41, -0.05em -0.025em 0 #ff0080, 0.025em 0.05em 0 #ffff00; }
+            16% { text-shadow: -0.05em -0.025em 0 #00ff41, 0.025em 0.025em 0 #ff0080, -0.05em -0.05em 0 #ffff00; }
+            49% { text-shadow: -0.05em -0.025em 0 #00ff41, 0.025em 0.025em 0 #ff0080, -0.05em -0.05em 0 #ffff00; }
+            50% { text-shadow: 0.025em 0.05em 0 #00ff41, 0.05em 0 0 #ff0080, 0 -0.05em 0 #ffff00; }
+            99% { text-shadow: 0.025em 0.05em 0 #00ff41, 0.05em 0 0 #ff0080, 0 -0.05em 0 #ffff00; }
+            100% { text-shadow: -0.025em 0 0 #00ff41, -0.025em -0.025em 0 #ff0080, -0.025em -0.05em 0 #ffff00; }
+        }
+        
+        .glitch-text {
+            animation: glitch 2s infinite;
+        }
+        
+        /* Float Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Card hover effects */
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        /* Navigation styles */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #00ff41;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(45deg, #00ff41, #ff0080);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Pulse animation for buttons */
+        @keyframes pulse-neon {
+            0% {
+                box-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41;
+            }
+            50% {
+                box-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080;
+            }
+            100% {
+                box-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41;
+            }
+        }
+
+        .pulse-neon {
+            animation: pulse-neon 2s ease-in-out infinite;
+        }
+
+        /* Background gradient animation */
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(-45deg, #0a0a0a, #1a1a1a, #0a0a0a, #2a2a2a);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+
+        /* Loading animation */
+        .loading-dots::after {
+            content: '';
+            animation: loading-dots 1.5s infinite;
+        }
+
+        @keyframes loading-dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .glitch-text {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .glitch-text {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="dark bg-dark-primary text-white min-h-screen animated-gradient">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-dark-primary/90 backdrop-blur-sm border-b border-dark-tertiary z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-orbitron font-bold">
+                    <span class="text-neon-green">Video</span><span class="text-neon-pink">Editor</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#showcase" class="nav-link">Showcase</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-secondary">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">Home</a>
+                <a href="#about" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">About</a>
+                <a href="#services" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">Services</a>
+                <a href="#portfolio" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">Portfolio</a>
+                <a href="#showcase" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">Showcase</a>
+                <a href="#pricing" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">Pricing</a>
+                <a href="#blog" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">Blog</a>
+                <a href="#contact" class="block px-3 py-2 text-white hover:text-neon-green mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 bg-gradient-to-br from-dark-primary via-dark-secondary to-dark-primary opacity-90"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-orbitron font-black mb-6 glitch-text">
+                <span class="text-neon-green">VIDEO</span>
+                <br>
+                <span class="text-neon-pink">EDITOR</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-300 font-inter">
+                Professional video editing for <span class="text-neon-yellow">YouTube Shorts</span>, 
+                <span class="text-neon-green">Cinematic Montages</span>, and 
+                <span class="text-neon-pink">VFX Magic</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToSection('portfolio')" class="px-8 py-4 bg-gradient-to-r from-neon-green to-neon-pink text-dark-primary font-bold rounded-lg hover:scale-105 transition-all duration-300 pulse-neon">
+                    View Portfolio
+                </button>
+                <button onclick="scrollToSection('contact')" class="px-8 py-4 border-2 border-neon-green text-neon-green font-bold rounded-lg hover:bg-neon-green hover:text-dark-primary transition-all duration-300">
+                    Hire Me Now
+                </button>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-4 sm:gap-8 mt-16 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-neon-green">500+</div>
+                    <div class="text-sm text-gray-400">Projects</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-neon-pink">50M+</div>
+                    <div class="text-sm text-gray-400">Views</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-neon-yellow">24/7</div>
+                    <div class="text-sm text-gray-400">Support</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 text-neon-yellow opacity-50 float-animation hidden sm:block">
+            <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 right-10 text-neon-pink opacity-50 float-animation hidden sm:block" style="animation-delay: -2s;">
+            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark-secondary">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-12">
+                <span class="text-neon-green">About</span> <span class="text-neon-pink">Me</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <div class="w-64 h-64 bg-gradient-to-br from-neon-green to-neon-pink rounded-full mx-auto md:mx-0 mb-8 flex items-center justify-center">
+                        <div class="w-60 h-60 bg-dark-primary rounded-full flex items-center justify-center">
+                            <span class="text-6xl">🎬</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-orbitron font-bold mb-4 text-neon-yellow">Creative Video Professional</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        With over 5 years of experience in video editing, I specialize in creating stunning visual content 
+                        that captures attention and tells compelling stories. From viral YouTube Shorts to cinematic 
+                        masterpieces, I bring your vision to life with cutting-edge techniques and creative flair.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center p-4 bg-dark-tertiary rounded-lg hover-glow">
+                            <div class="text-2xl font-bold text-neon-green">500+</div>
+                            <div class="text-sm text-gray-400">Projects Completed</div>
+                        </div>
+                        <div class="text-center p-4 bg-dark-tertiary rounded-lg hover-glow">
+                            <div class="text-2xl font-bold text-neon-pink">50M+</div>
+                            <div class="text-sm text-gray-400">Total Views</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-neon-green/20 text-neon-green rounded-full text-sm">After Effects</span>
+                        <span class="px-3 py-1 bg-neon-pink/20 text-neon-pink rounded-full text-sm">Premiere Pro</span>
+                        <span class="px-3 py-1 bg-neon-yellow/20 text-neon-yellow rounded-full text-sm">DaVinci Resolve</span>
+                        <span class="px-3 py-1 bg-neon-green/20 text-neon-green rounded-full text-sm">Cinema 4D</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-dark-primary">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-12">
+                <span class="text-neon-pink">My</span> <span class="text-neon-green">Services</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- YouTube Shorts -->
+                <div class="bg-dark-secondary p-6 rounded-lg border border-dark-tertiary hover-glow">
+                    <div class="text-4xl mb-4 text-neon-yellow">📱</div>
+                    <h3 class="text-xl font-orbitron font-bold mb-4 text-neon-green">YouTube Shorts</h3>
+                    <p class="text-gray-300 mb-4">Viral-ready short-form content optimized for maximum engagement and views.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Hook-heavy openings</li>
+                        <li>• Trending music integration</li>
+                        <li>• Mobile-optimized editing</li>
+                        <li>• Quick turnaround times</li>
+                    </ul>
+                    <div class="mt-4 text-2xl font-bold text-neon-green">From $50</div>
+                </div>
+                
+                <!-- Cinematic Montages -->
+                <div class="bg-dark-secondary p-6 rounded-lg border border-dark-tertiary hover-glow">
+                    <div class="text-4xl mb-4 text-neon-pink">🎭</div>
+                    <h3 class="text-xl font-orbitron font-bold mb-4 text-neon-pink">Cinematic Montages</h3>
+                    <p class="text-gray-300 mb-4">Epic storytelling through carefully crafted visual sequences and transitions.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Color grading mastery</li>
+                        <li>• Dynamic transitions</li>
+                        <li>• Sound design</li>
+                        <li>• Emotional storytelling</li>
+                    </ul>
+                    <div class="mt-4 text-2xl font-bold text-neon-pink">From $150</div>
+                </div>
+                
+                <!-- VFX & Animation -->
+                <div class="bg-dark-secondary p-6 rounded-lg border border-dark-tertiary hover-glow">
+                    <div class="text-4xl mb-4 text-neon-green">✨</div>
+                    <h3 class="text-xl font-orbitron font-bold mb-4 text-neon-yellow">VFX & Animation</h3>
+                    <p class="text-gray-300 mb-4">Mind-blowing visual effects and motion graphics that captivate audiences.</p>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• 3D motion graphics</li>
+                        <li>• Particle effects</li>
+                        <li>• Green screen compositing</li>
+                        <li>• Custom animations</li>
+                    </ul>
+                    <div class="mt-4 text-2xl font-bold text-neon-yellow">From $300</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-dark-secondary">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-12">
+                <span class="text-neon-yellow">My</span> <span class="text-neon-green">Portfolio</span>
+            </h2>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="filterPortfolio('all')" class="portfolio-filter active px-6 py-2 bg-neon-green text-dark-primary font-bold rounded-lg">All</button>
+                <button onclick="filterPortfolio('shorts')" class="portfolio-filter px-6 py-2 border border-neon-green text-neon-green font-bold rounded-lg hover:bg-neon-green hover:text-dark-primary transition-all">YouTube Shorts</button>
+                <button onclick="filterPortfolio('cinematic')" class="portfolio-filter px-6 py-2 border border-neon-pink text-neon-pink font-bold rounded-lg hover:bg-neon-pink hover:text-dark-primary transition-all">Cinematic</button>
+                <button onclick="filterPortfolio('vfx')" class="portfolio-filter px-6 py-2 border border-neon-yellow text-neon-yellow font-bold rounded-lg hover:bg-neon-yellow hover:text-dark-primary transition-all">VFX</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6" id="portfolio-grid">
+                <!-- YouTube Shorts -->
+                <div class="portfolio-item shorts bg-dark-primary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-green/20 to-neon-pink/20 flex items-center justify-center">
+                        <div class="text-6xl">📱</div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-neon-green mb-2">Viral Gaming Short</h4>
+                        <p class="text-sm text-gray-400 mb-2">Epic gaming moments compilation</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-neon-yellow">2.3M views</span>
+                            <button class="text-xs text-neon-pink hover:text-white">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item shorts bg-dark-primary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-pink/20 to-neon-yellow/20 flex items-center justify-center">
+                        <div class="text-6xl">🎵</div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-neon-pink mb-2">Music Video Short</h4>
+                        <p class="text-sm text-gray-400 mb-2">Trending song edit</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-neon-yellow">1.8M views</span>
+                            <button class="text-xs text-neon-pink hover:text-white">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cinematic -->
+                <div class="portfolio-item cinematic bg-dark-primary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-yellow/20 to-neon-green/20 flex items-center justify-center">
+                        <div class="text-6xl">🎬</div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-neon-yellow mb-2">Travel Cinematic</h4>
+                        <p class="text-sm text-gray-400 mb-2">Breathtaking landscape montage</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-neon-yellow">850K views</span>
+                            <button class="text-xs text-neon-pink hover:text-white">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item cinematic bg-dark-primary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-green/20 to-neon-pink/20 flex items-center justify-center">
+                        <div class="text-6xl">💍</div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-neon-green mb-2">Wedding Film</h4>
+                        <p class="text-sm text-gray-400 mb-2">Emotional love story capture</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-neon-yellow">420K views</span>
+                            <button class="text-xs text-neon-pink hover:text-white">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VFX -->
+                <div class="portfolio-item vfx bg-dark-primary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-pink/20 to-neon-yellow/20 flex items-center justify-center">
+                        <div class="text-6xl">⚡</div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-neon-pink mb-2">Lightning VFX</h4>
+                        <p class="text-sm text-gray-400 mb-2">Supernatural powers effect</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-neon-yellow">1.2M views</span>
+                            <button class="text-xs text-neon-pink hover:text-white">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item vfx bg-dark-primary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-yellow/20 to-neon-green/20 flex items-center justify-center">
+                        <div class="text-6xl">🌟</div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-neon-yellow mb-2">Particle Magic</h4>
+                        <p class="text-sm text-gray-400 mb-2">3D particle system showcase</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-neon-yellow">980K views</span>
+                            <button class="text-xs text-neon-pink hover:text-white">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Video Showcase -->
+    <section id="showcase" class="py-20 bg-dark-primary">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-12">
+                <span class="text-neon-green">Enhanced</span> <span class="text-neon-pink">Showcase</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-dark-secondary p-6 rounded-lg border border-dark-tertiary">
+                    <h3 class="text-xl font-bold text-neon-yellow mb-4">Before & After</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-video bg-gray-800 rounded flex items-center justify-center">
+                            <span class="text-gray-500">Before</span>
+                        </div>
+                        <div class="aspect-video bg-gradient-to-br from-neon-green/20 to-neon-pink/20 rounded flex items-center justify-center">
+                            <span class="text-neon-green">After</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-2">Raw footage transformed into cinematic masterpiece</p>
+                </div>
+                
+                <div class="bg-dark-secondary p-6 rounded-lg border border-dark-tertiary">
+                    <h3 class="text-xl font-bold text-neon-pink mb-4">Process Breakdown</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span class="text-sm">Raw footage analysis</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-neon-pink rounded-full mr-3"></div>
+                            <span class="text-sm">Color grading & correction</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-neon-yellow rounded-full mr-3"></div>
+                            <span class="text-sm">VFX & motion graphics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span class="text-sm">Final rendering & delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Calculator -->
+    <section id="pricing" class="py-20 bg-dark-secondary">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-12">
+                <span class="text-neon-green">Pricing</span> <span class="text-neon-pink">Calculator</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-orbitron font-bold mb-6 text-neon-yellow">Project Configuration</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Project Type</label>
+                            <select id="project-type" class="w-full px-4 py-3 bg-dark-primary border border-dark-tertiary rounded-lg text-white focus:border-neon-green focus:outline-none">
+                                <option value="50">YouTube Shorts - $50</option>
+                                <option value="150">Cinematic Montage - $150</option>
+                                <option value="300">VFX & Animation - $300</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Video Length</label>
+                            <select id="video-length" class="w-full px-4 py-3 bg-dark-primary border border-dark-tertiary rounded-lg text-white focus:border-neon-green focus:outline-none">
+                                <option value="1">0-30 seconds (×1)</option>
+                                <option value="1.5">30-60 seconds (×1.5)</option>
+                                <option value="2">1-3 minutes (×2)</option>
+                                <option value="3">3-5 minutes (×3)</option>
+                                <option value="4">5+ minutes (×4)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Rush Delivery</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="rush-24h" class="mr-2" value="50">
+                                    <span>24-hour delivery (+$50)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="rush-12h" class="mr-2" value="100">
+                                    <span>12-hour delivery (+$100)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Add-ons</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="addon-color" class="mr-2" value="30">
+                                    <span>Advanced Color Grading (+$30)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="addon-sound" class="mr-2" value="40">
+                                    <span>Custom Sound Design (+$40)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" id="addon-subtitles" class="mr-2" value="20">
+                                    <span>Subtitles & Captions (+$20)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-dark-primary p-8 rounded-lg border border-dark-tertiary">
+                        <h3 class="text-2xl font-orbitron font-bold mb-6 text-center text-neon-pink">Project Estimate</h3>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between">
+                                <span>Base Price:</span>
+                                <span id="base-price">$50</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Length Multiplier:</span>
+                                <span id="length-multiplier">×1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Rush Delivery:</span>
+                                <span id="rush-cost">$0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Add-ons:</span>
+                                <span id="addons-cost">$0</span>
+                            </div>
+                            <hr class="border-dark-tertiary">
+                            <div class="flex justify-between text-xl font-bold">
+                                <span class="text-neon-green">Total:</span>
+                                <span id="total-price" class="text-neon-pink">$50</span>
+                            </div>
+                        </div>
+                        
+                        <button onclick="scrollToSection('contact')" class="w-full py-4 bg-gradient-to-r from-neon-green to-neon-pink text-dark-primary font-bold rounded-lg hover:scale-105 transition-all">
+                            Get Started Now
+                        </button>
+                        
+                        <p class="text-xs text-gray-400 text-center mt-4">
+                            Final price may vary based on project complexity
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-dark-primary">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-12">
+                <span class="text-neon-yellow">Latest</span> <span class="text-neon-green">Blog</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-dark-secondary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-green/20 to-neon-pink/20 flex items-center justify-center">
+                        <span class="text-4xl">📝</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-neon-yellow bg-neon-yellow/20 px-2 py-1 rounded">Tips</span>
+                        <h3 class="text-lg font-bold mt-2 mb-3">5 Tips for Viral YouTube Shorts</h3>
+                        <p class="text-sm text-gray-400 mb-4">Learn the secrets behind creating engaging short-form content that gets millions of views.</p>
+                        <div class="text-xs text-gray-500">2 days ago</div>
+                    </div>
+                </article>
+                
+                <article class="bg-dark-secondary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-pink/20 to-neon-yellow/20 flex items-center justify-center">
+                        <span class="text-4xl">🎨</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-neon-pink bg-neon-pink/20 px-2 py-1 rounded">Tutorial</span>
+                        <h3 class="text-lg font-bold mt-2 mb-3">Color Grading Like a Pro</h3>
+                        <p class="text-sm text-gray-400 mb-4">Master the art of color grading to transform your footage into cinematic masterpieces.</p>
+                        <div class="text-xs text-gray-500">1 week ago</div>
+                    </div>
+                </article>
+                
+                <article class="bg-dark-secondary rounded-lg overflow-hidden hover-glow">
+                    <div class="aspect-video bg-gradient-to-br from-neon-yellow/20 to-neon-green/20 flex items-center justify-center">
+                        <span class="text-4xl">⚡</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-neon-green bg-neon-green/20 px-2 py-1 rounded">VFX</span>
+                        <h3 class="text-lg font-bold mt-2 mb-3">Creating Epic VFX on Budget</h3>
+                        <p class="text-sm text-gray-400 mb-4">Discover how to create Hollywood-level effects without breaking the bank.</p>
+                        <div class="text-xs text-gray-500">2 weeks ago</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-secondary">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-orbitron font-bold text-center mb-12">
+                <span class="text-neon-pink">Get In</span> <span class="text-neon-green">Touch</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-orbitron font-bold mb-6 text-neon-yellow">Let's Create Something Amazing</h3>
+                    <p class="text-gray-300 mb-8">Ready to bring your vision to life? Get in touch and let's discuss your next video project.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-neon-green/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-neon-green">📧</span>
+                            </div>
+                            <div>
+                                <div class="font-bold">Email</div>
+                                <div class="text-gray-400">contact@videoeditor.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-neon-pink/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-neon-pink">📱</span>
+                            </div>
+                            <div>
+                                <div class="font-bold">Response Time</div>
+                                <div class="text-gray-400">Within 2 hours</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-neon-yellow/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-neon-yellow">🌍</span>
+                            </div>
+                            <div>
+                                <div class="font-bold">Availability</div>
+                                <div class="text-gray-400">24/7 Support</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow My Work</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center hover:scale-110 transition-all">
+                                <span class="text-white text-sm">YT</span>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center hover:scale-110 transition-all">
+                                <span class="text-white text-sm">IG</span>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center hover:scale-110 transition-all">
+                                <span class="text-white text-sm">FV</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Your Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 bg-dark-primary border border-dark-tertiary rounded-lg text-white focus:border-neon-green focus:outline-none">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Email Address *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 bg-dark-primary border border-dark-tertiary rounded-lg text-white focus:border-neon-green focus:outline-none">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Project Type</label>
+                            <select name="project-type" class="w-full px-4 py-3 bg-dark-primary border border-dark-tertiary rounded-lg text-white focus:border-neon-green focus:outline-none">
+                                <option value="">Select project type</option>
+                                <option value="youtube-shorts">YouTube Shorts</option>
+                                <option value="cinematic">Cinematic Montage</option>
+                                <option value="vfx">VFX & Animation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Budget Range</label>
+                            <select name="budget" class="w-full px-4 py-3 bg-dark-primary border border-dark-tertiary rounded-lg text-white focus:border-neon-green focus:outline-none">
+                                <option value="">Select budget</option>
+                                <option value="under-100">Under $100</option>
+                                <option value="100-500">$100 - $500</option>
+                                <option value="500-1000">$500 - $1000</option>
+                                <option value="over-1000">Over $1000</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Project Details *</label>
+                            <textarea name="message" rows="4" required placeholder="Tell me about your project, timeline, and any specific requirements..." class="w-full px-4 py-3 bg-dark-primary border border-dark-tertiary rounded-lg text-white focus:border-neon-green focus:outline-none resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-neon-green to-neon-pink text-dark-primary font-bold rounded-lg hover:scale-105 transition-all pulse-neon">
+                            Send Project Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-primary py-12 border-t border-dark-tertiary">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="text-2xl font-orbitron font-bold mb-4">
+                <span class="text-neon-green">Video</span><span class="text-neon-pink">Editor</span>
+            </div>
+            <p class="text-gray-400 mb-6">Creating viral content that captivates and converts</p>
+            
+            <!-- Quick Links -->
+            <div class="flex flex-wrap justify-center gap-6 mb-6 text-sm">
+                <a href="#home" class="text-gray-400 hover:text-neon-green">Home</a>
+                <a href="#about" class="text-gray-400 hover:text-neon-green">About</a>
+                <a href="#services" class="text-gray-400 hover:text-neon-green">Services</a>
+                <a href="#portfolio" class="text-gray-400 hover:text-neon-green">Portfolio</a>
+                <a href="#pricing" class="text-gray-400 hover:text-neon-green">Pricing</a>
+                <a href="#contact" class="text-gray-400 hover:text-neon-green">Contact</a>
+            </div>
+            
+            <div class="text-sm text-gray-500">
+                © 2024 Professional Video Editor. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth Scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Portfolio Filter
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const filters = document.querySelectorAll('.portfolio-filter');
+            
+            // Update active filter
+            filters.forEach(filter => {
+                filter.classList.remove('active', 'bg-neon-green', 'text-dark-primary');
+                filter.classList.add('border', 'border-neon-green', 'text-neon-green');
+            });
+            
+            event.target.classList.add('active', 'bg-neon-green', 'text-dark-primary');
+            event.target.classList.remove('border', 'border-neon-green', 'text-neon-green');
+            
+            // Filter items with animation
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                    }, 100);
+                } else {
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Pricing Calculator
+        function updatePricing() {
+            const projectType = document.getElementById('project-type');
+            const videoLength = document.getElementById('video-length');
+            const rush24h = document.getElementById('rush-24h');
+            const rush12h = document.getElementById('rush-12h');
+            const addonColor = document.getElementById('addon-color');
+            const addonSound = document.getElementById('addon-sound');
+            const addonSubtitles = document.getElementById('addon-subtitles');
+
+            let basePrice = parseInt(projectType.value);
+            let lengthMultiplier = parseFloat(videoLength.value);
+            let rushCost = 0;
+            let addonsCost = 0;
+
+            // Rush delivery (mutually exclusive)
+            if (rush12h.checked) {
+                rushCost = 100;
+                rush24h.checked = false;
+            } else if (rush24h.checked) {
+                rushCost = 50;
+            }
+
+            // Add-ons
+            if (addonColor.checked) addonsCost += 30;
+            if (addonSound.checked) addonsCost += 40;
+            if (addonSubtitles.checked) addonsCost += 20;
+
+            let total = (basePrice * lengthMultiplier) + rushCost + addonsCost;
+
+            // Update display
+            document.getElementById('base-price').textContent = `$${basePrice}`;
+            document.getElementById('length-multiplier').textContent = `×${lengthMultiplier}`;
+            document.getElementById('rush-cost').textContent = `$${rushCost}`;
+            document.getElementById('addons-cost').textContent = `$${addonsCost}`;
+            document.getElementById('total-price').textContent = `$${total}`;
+        }
+
+        // Add event listeners for pricing calculator
+        document.addEventListener('DOMContentLoaded', function() {
+            const pricingInputs = [
+                'project-type', 'video-length', 'rush-24h', 'rush-12h',
+                'addon-color', 'addon-sound', 'addon-subtitles'
+            ];
+
+            pricingInputs.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('change', updatePricing);
+                }
+            });
+
+            // Ensure rush delivery options are mutually exclusive
+            document.getElementById('rush-12h').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('rush-24h').checked = false;
+                }
+                updatePricing();
+            });
+
+            document.getElementById('rush-24h').addEventListener('change', function() {
+                if (this.checked) {
+                    document.getElementById('rush-12h').checked = false;
+                }
+                updatePricing();
+            });
+
+            // Initialize pricing
+            updatePricing();
+        });
+
+        // Contact Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Basic validation
+            if (!data.name || !data.email || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Show success message
+            alert('Thank you for your inquiry! I\'ll get back to you within 2 hours.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Scroll-based animations and effects
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            
+            // Parallax effect for floating elements
+            const floatingElements = document.querySelectorAll('.float-animation');
+            floatingElements.forEach(element => {
+                const speed = scrolled * 0.2;
+                element.style.transform = `translateY(${speed}px)`;
+            });
+        });
+
+        // Intersection Observer for section animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(50px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        });
+
+        // Add navigation active state based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-neon-green');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-neon-green');
+                }
+            });
+        });
+
+        // Performance optimization: Throttle scroll events
+        let ticking = false;
+        function updateOnScroll() {
+            // Scroll-based updates here
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateOnScroll);
+                ticking = true;
+            }
+        });
+    </script>
+</body>
+</html>
